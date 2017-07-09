@@ -20,7 +20,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
-
+from __future__ import with_statement,print_function
 import sys
 import os, os.path
 import signal
@@ -88,7 +88,7 @@ def run(num_processes = 2, port = 8080, logging = False, trace_sql = False,
                        else RequestHandlerNoLogging,
                    num_processes, trace_sql, db_engine)
     httpd.set_app(wsgi_app.wsgi_app)
-    print "Server running..."
+    print("Server running...")
     httpd.serve_forever()
 
 if __name__ == "__main__":

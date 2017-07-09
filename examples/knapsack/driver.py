@@ -2,7 +2,7 @@
 
 # driver.py
 
-from __future__ import with_statement
+from __future__ import with_statement,print_function
 from pyke import knowledge_engine
 from pyke import krb_traceback 
 
@@ -26,4 +26,4 @@ def run(pantry, capacity):
 
 if __name__ == "__main__":
     import sys
-    print run(eval(sys.argv[1]), int(sys.argv[2]))
+    print(run(eval(sys.argv[1]), int(sys.argv[2])))
